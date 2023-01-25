@@ -12,11 +12,13 @@ IMG_WIDTH = 256
 
 app = FastAPI()
 
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "https://potato-disease-classification.netlify.app/"
-]
+# origins = [
+#     "http://localhost",
+#     "http://localhost:3000",
+#     "https://potato-disease-classification.netlify.app"
+# ]
+
+origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
